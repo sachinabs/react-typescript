@@ -1,21 +1,14 @@
 
 import './App.css';
-import { Button } from './components/Button';
-import { InputBox } from './components/InputBox';
+import { Container } from './components/Container';
+
 
 
 function App() {
 
   return (
     <div className="App">
-      <InputBox  handle_click={(event) => {
-        console.log(event.target.value);
-
-      }} />
-      <Button handle_click={(event, id) => {
-        console.log("works", event, id);
-        
-      }} />
+     <Container styles={{border:"2px solid green",padding:"10px", marginTop:"20px",display:"flex",justifyContent:"center"}}/>
     </div>
   );
 }

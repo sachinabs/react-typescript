@@ -1,16 +1,15 @@
-#ts-components-event-props
-main 2 events [click,change]
+#styles props
 
-click event : you have to set ButtonProps like...
+we can pass the styles in props so that we have to do 
 
-type ButtonProps = {
-     'handle_click':(event:React.MouseEvent<HTMLButtonElement>,id:string)=> void
+define the type like..
+
+type StyleProps={
+    "styles":React.CSSProperties
 }
 
-change event : you have to set inputProps like...
+pass the props to div or element in style data tag
 
-type InputBox = {
-    'handle_click':(event:React.ChangeEvent<HTMLInputElement>)=> void
-}
+<ComponentName style ={{"styleName":"vale"}}
 
-##need to do a task related to events geting value from the input box.
+<span style={props:StyleProps}> hai this is abs </span>
