@@ -1,0 +1,24 @@
+Components ==> Block of code that is saved in isolated folder, that accepts props to show dynamic values.
+
+types ==> That define the data type that to be used in the Components
+
+how to pass the value to props ==> <Component name="value">
+
+how to pass the array values top props ==> <Component listOfData={arrayName}> use map to loop the data in the web
+
+unions of string Literals == > variable that accepts only particular value
+type typeProps = {
+    'name':"hai","how are you"  == > not other words are accepted in this. 
+}
+
+children props ==> passing the value in the form of tag <span> {value}  </span>
+type childrenProp ={
+    children:React.ReactNode
+}
+
+optional Props ==> not required props that to be passed.
+
+type optionalProps = {
+    'name' : "string",
+    'last_name'?:"string"
+}
