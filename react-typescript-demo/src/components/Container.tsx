@@ -1,9 +1,25 @@
-import { ContainerStyles } from "../types/type.dt"
+import { useState } from "react"
+// import {  } from "../types/type.dt"
 
-export const Container = (props: ContainerStyles) => {
+export const LoggedIn = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    const handleTheLogin = () => {
+        setIsLoggedIn(true)
+    }
+
+    const handleTheLogOut = () => {
+        setIsLoggedIn(false)
+    }
+
+
     return (
-        <div style={props.styles} className="mainDiv">
-            <span > This is sachin abs learning React & Ts </span>
+        <div>
+            <button onClick={handleTheLogin}>Login</button>
+            <button onClick={handleTheLogOut}>LogOut</button>
+            <div>
+                <span>User is {isLoggedIn ? "Welcome to home page...!" : "Please login to continue...!"}</span>
+            </div>
         </div>
     )
 }

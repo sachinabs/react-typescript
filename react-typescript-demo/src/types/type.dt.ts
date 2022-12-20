@@ -1,12 +1,8 @@
-
-export type ContainerStyles = {
-    "styles": React.CSSProperties
-}
-export type NameProps = {
+export type userList = {
     "first_name": string
 }
 
-export type UserNameProps = {
-    "first_name": NameProps,
-    "last_name": string
+export type AuthUser = {
+    name: string,
+    email: string
 }
