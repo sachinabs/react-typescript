@@ -1,12 +1,9 @@
-type ContainerStyles ={
-    "styles":React.CSSProperties
-}
+import { ContainerStyles } from "../types/type.dt"
 
-
-export const Container = (props:ContainerStyles) =>{
+export const Container = (props: ContainerStyles) => {
     return (
         <div style={props.styles} className="mainDiv">
-            <span > This is sachin abs learining React & Ts </span>
+            <span > This is sachin abs learning React & Ts </span>
         </div>
     )
 }
