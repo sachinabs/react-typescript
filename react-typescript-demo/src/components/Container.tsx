@@ -1,15 +1,18 @@
 import { useState } from "react"
-// import {  } from "../types/type.dt"
+import { AuthUser } from "../types/type.dt"
 
-export const LoggedIn = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+export const User = () => {
+    const [user, setUser] = useState<AuthUser | null>(null)
 
     const handleTheLogin = () => {
-        setIsLoggedIn(true)
+        setUser({
+            name: "sachinabs",
+            email: "sachinabs@tada.com"
+        })
     }
 
     const handleTheLogOut = () => {
-        setIsLoggedIn(false)
+        setUser(null)
     }
 
 
@@ -18,7 +21,8 @@ export const LoggedIn = () => {
             <button onClick={handleTheLogin}>Login</button>
             <button onClick={handleTheLogOut}>LogOut</button>
             <div>
-                <span>User is {isLoggedIn ? "Welcome to home page...!" : "Please login to continue...!"}</span>
+                <span>User name <code>{user?.name}</code></span> <br />
+                <span>User email <code>{user?.email}</code></span>
             </div>
         </div>
     )

@@ -1,2 +1,16 @@
 #React Hooks [useState]
     useState hook instantly change the value of dom that helps to track the value of the state
+
+## -Type- the useState Hooks 
+    we can set the useState value in type by simply providing 
+
+
+    export type AuthUser = {
+    name: string,
+    email: string
+    }
+
+    const [user, setUser] = useState<AuthUser | null>(null) 
+        in this case user state can accept either null value or AuthUser type 
+
+        reference: https://www.youtube.com/watch?v=LNpWuRUIR5A
