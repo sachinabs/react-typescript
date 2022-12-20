@@ -1,24 +1,16 @@
-Components ==> Block of code that is saved in isolated folder, that accepts props to show dynamic values.
+#ts-components-event-props
+main 2 events [click,change]
 
-types ==> That define the data type that to be used in the Components
+click event : you have to set ButtonProps like...
 
-how to pass the value to props ==> <Component name="value">
-
-how to pass the array values top props ==> <Component listOfData={arrayName}> use map to loop the data in the web
-
-unions of string Literals == > variable that accepts only particular value
-type typeProps = {
-    'name':"hai","how are you"  == > not other words are accepted in this. 
+type ButtonProps = {
+     'handle_click':(event:React.MouseEvent<HTMLButtonElement>,id:string)=> void
 }
 
-children props ==> passing the value in the form of tag <span> {value}  </span>
-type childrenProp ={
-    children:React.ReactNode
+change event : you have to set inputProps like...
+
+type InputBox = {
+    'handle_click':(event:React.ChangeEvent<HTMLInputElement>)=> void
 }
 
-optional Props ==> not required props that to be passed.
-
-type optionalProps = {
-    'name' : "string",
-    'last_name'?:"string"
-}
+##need to do a task related to events geting value from the input box.
