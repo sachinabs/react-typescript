@@ -3,6 +3,7 @@ import { AuthUser } from "../types/type.dt"
 
 export const User = () => {
     const [user, setUser] = useState<AuthUser | null>(null)
+    // const [user, setUser] = useState<AuthUser>({}as AuthUser) ==> type assertion
 
     const handleTheLogin = () => {
         setUser({

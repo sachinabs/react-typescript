@@ -14,3 +14,7 @@
         in this case user state can accept either null value or AuthUser type 
 
         reference: https://www.youtube.com/watch?v=LNpWuRUIR5A
+
+
+we can set the property of the use state that is set later so we can set it as 
+const [user, setUser] = useState<AuthUser>({}as AuthUser) 
